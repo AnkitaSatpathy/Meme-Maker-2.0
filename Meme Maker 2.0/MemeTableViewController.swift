@@ -13,15 +13,19 @@ let appDelegate = UIApplication.shared.delegate as! AppDelegate
 class MemeTableViewController: UITableViewController {
 
     var memes = [Meme]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-       tableView.reloadData()
+    
         memes = appDelegate.memes
         
     }
+    
 
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
@@ -56,22 +60,7 @@ class MemeTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+        /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

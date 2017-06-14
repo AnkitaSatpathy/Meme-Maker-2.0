@@ -117,12 +117,25 @@ class MemeEditViewController: UIViewController ,  UINavigationControllerDelegate
         // Add it to the memes array in the Application Delegate
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.memes.append(meme)
+        print("meme Saved, memes count" + "\(appDelegate.memes.count)")
     }
     
     @IBAction func shareBtnTapped(_ sender: Any) {
         let memedImage = generateMemedImage()
         let shareController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
         present(shareController, animated: true, completion: nil)
+        shareController.completionWithItemsHandler = {
+            activity , success, items, error in
+            if (!success){
+                return
+            }
+            else {
+                self.saveMemedImage(memedImage: memedImage)
+            }
+            self.dismiss(animated: true, completion: nil)
+        }
+            
+        
     
     }
    
