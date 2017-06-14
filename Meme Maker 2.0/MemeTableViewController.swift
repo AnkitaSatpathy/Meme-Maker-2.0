@@ -12,13 +12,13 @@ let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
 class MemeTableViewController: UITableViewController {
 
-    var memes = [Meme]()
+    var memes :[Meme]{
+        return appDelegate.memes
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        memes = appDelegate.memes
-        
-    }
+}
     
 
     

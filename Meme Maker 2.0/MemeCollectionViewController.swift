@@ -12,13 +12,15 @@ private let reuseIdentifier = "collectionCell"
 
 class MemeCollectionViewController: UICollectionViewController {
 
-    var memes = [Meme]()
+    var memes : [Meme]{
+        return appDelegate.memes
+    }
+    
     @IBOutlet weak var flowLayout : UICollectionViewFlowLayout!
     
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        memes = appDelegate.memes
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
