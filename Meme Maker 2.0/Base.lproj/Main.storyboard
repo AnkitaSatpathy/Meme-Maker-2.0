@@ -23,10 +23,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ARC-eS-ACV">
-                                <rect key="frame" x="0.0" y="78" width="375" height="482"/>
+                                <rect key="frame" x="0.0" y="122" width="375" height="389"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="150-R8-Tfh">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="574" width="375" height="44"/>
                                 <items>
                                     <barButtonItem title="Album" id="kg9-Al-rnF">
                                         <connections>
@@ -42,7 +42,7 @@
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YJ5-iz-brA">
-                                <rect key="frame" x="0.0" y="34" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="78" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="KTX-Af-z9N"/>
                                 </constraints>
@@ -62,7 +62,7 @@
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kN-fo-pmI">
-                                <rect key="frame" x="77" y="104" width="246" height="30"/>
+                                <rect key="frame" x="77" y="148" width="246" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="zMg-UB-6Ei"/>
@@ -72,7 +72,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mnn-Ut-P3A">
-                                <rect key="frame" x="77" y="501" width="246" height="30"/>
+                                <rect key="frame" x="77" y="452" width="246" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="dxp-N5-RlX"/>
@@ -101,6 +101,7 @@
                             <constraint firstItem="150-R8-Tfh" firstAttribute="trailing" secondItem="ARC-eS-ACV" secondAttribute="trailing" id="zyK-Vw-tgm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="M0U-In-ta6"/>
                     <connections>
                         <outlet property="bottomTF" destination="Mnn-Ut-P3A" id="5gG-KY-KZ9"/>
                         <outlet property="camBtn" destination="HN0-mh-WBZ" id="hBZ-Zg-05N"/>
@@ -114,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cu1-37-ayo" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2801" y="118"/>
+            <point key="canvasLocation" x="3740" y="117.39130434782609"/>
         </scene>
         <!--Sent Memes-->
         <scene sceneID="CFD-0C-Dfe">
@@ -156,7 +157,7 @@
                     <navigationItem key="navigationItem" title="Sent Memes" id="IRv-pD-Ee8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="4GW-Gg-5Zt">
                             <connections>
-                                <segue destination="Kp1-SS-OiJ" kind="show" id="Odc-Td-inq"/>
+                                <segue destination="exn-9n-aHo" kind="show" id="Odc-Td-inq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -211,7 +212,7 @@
                     <navigationItem key="navigationItem" title="Sent Memes" id="Wku-k9-T1O">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Z9B-nL-CAy">
                             <connections>
-                                <segue destination="Kp1-SS-OiJ" kind="show" id="MGq-7s-Pv7"/>
+                                <segue destination="exn-9n-aHo" kind="show" id="MGq-7s-Pv7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -278,6 +279,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpI-Pl-emD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1861.5999999999999" y="1520.6896551724139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bhB-Ca-ahh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="exn-9n-aHo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5E3-qh-khb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kp1-SS-OiJ" kind="relationship" relationship="rootViewController" id="S5o-AY-Xwx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfx-0t-5Ah" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2800.8000000000002" y="117.39130434782609"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

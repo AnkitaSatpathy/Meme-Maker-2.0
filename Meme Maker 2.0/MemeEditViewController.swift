@@ -22,10 +22,10 @@ class MemeEditViewController: UIViewController ,  UINavigationControllerDelegate
     @IBOutlet weak var cancelBtn: UIBarButtonItem!
     
     let memeTextAttributes:[String:Any] = [
-        NSStrokeColorAttributeName: UIColor.black,
-        NSForegroundColorAttributeName: UIColor.white,
-        NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 35)!,
-        NSStrokeWidthAttributeName: -2.5]
+        NSAttributedStringKey.strokeColor.rawValue: UIColor.black,
+        NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
+        NSAttributedStringKey.font.rawValue: UIFont(name: "HelveticaNeue-CondensedBlack", size: 35)!,
+        NSAttributedStringKey.strokeWidth.rawValue: -2.5]
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,23 +132,23 @@ class MemeEditViewController: UIViewController ,  UINavigationControllerDelegate
             else {
                 self.saveMemedImage(memedImage: memedImage)
             }
-            self.dismiss(animated: true, completion: nil)
+           self.dismiss(animated: true, completion: nil)
         }
             
-        
+    
     
     }
    
     
     //When the keyboardWillShow notification is received, shift the view's frame up
     
-    func keyboardWillShow(_ notification:Notification) {
+    @objc func keyboardWillShow(_ notification:Notification) {
         if bottomTF.isFirstResponder {
             view.frame.origin.y -= getKeyboardHeight(notification)
         }
     }
     
-    func keyboardWillHide(_ notification:Notification) {
+    @objc func keyboardWillHide(_ notification:Notification) {
         if bottomTF.isFirstResponder{
             view.frame.origin.y += getKeyboardHeight(notification)
         }
